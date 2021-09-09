@@ -1,0 +1,36 @@
+h3 {
+    line-height: 1.5;
+}
+
+p2 {
+	color: #8f8f8f;
+}
+
+.about {
+    text-align: center;
+    padding-bottom: 7%;
+}
+
+.section-heading {
+    font-weight: 600;
+	font-size: 3rem;
+	font-weight: 600;
+	font-size: 3rem;
+	
+}
+
+.about-container {
+    padding: 7% 15%;
+}
+
+.carousel-inner, .carousel-item, .fab {
+    display: inline-block;
+}
+
+/* img {
+    height: "800";
+    width: "400";
+} */
+
+
+

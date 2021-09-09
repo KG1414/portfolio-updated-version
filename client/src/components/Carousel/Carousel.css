@@ -1,0 +1,101 @@
+.carousel-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 1px 2px 2px 2px grey;
+    /* box-shadow: 0 1px 5px rgb(0 0 0 / 25%), 0 5px 30px rgb(0 0 0 / 50%); */
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    padding-bottom: 3%;
+    display: flex;
+    position: relative;
+}
+
+.carousel-content-wrapper {
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.carousel-content {
+    /* overflow: scroll; */
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+    scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+/* hide scrollbar in webkit browser */
+/* .carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+    display: none;
+} */
+
+.carousel-content-wrapper::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-content > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.carousel-content.show-2 > * {
+    width: 50%;
+}
+
+.carousel-content.show-3 > * {
+    width: calc(100% / 3);
+}
+
+.carousel-content.show-4 > * {
+    width: calc(100% / 4);
+}
+
+.carousel-content.show-5 > * {
+    width: calc(100% / 5);
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: .5;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.outer-carousel {
+    position: relative;
+}
+
+.left-arrow {
+    left: 5%;
+    margin-right: 5px;
+    border: none;
+}
+
+.right-arrow {
+    right: 5%;
+    margin-left: 5px;
+    border: none;
+}
+
+
+
+/* Below is to detect touchscreen and remove arrow pointers */
+/* @media (hover: none) and (pointer: coarse) {
+    .left-arrow, .right-arrow {
+        display: none;
+    }
+} */

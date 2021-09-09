@@ -1,0 +1,52 @@
+.navbar-brand {
+    color: whitesmoke;
+}
+
+.navbar-brand:hover {
+    color: whitesmoke;
+}
+
+.nav-link{
+    color: whitesmoke;
+    display: inline-block;
+}
+.nav-link:hover {
+    color: black !important;
+    display: inline-block;
+}
+
+.nav-item {
+    padding: 10px 20px;
+}
+
+.navbar-toggler {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+.collapsed {
+    text-decoration: none !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+
+.navbar-toggler[aria-expanded="true"] {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 2px 2px 2px 2px grey !important;
+  }
+  
+
+/* Updated container fluid */
+.container-fluid {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+

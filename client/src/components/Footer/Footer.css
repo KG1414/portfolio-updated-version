@@ -1,0 +1,16 @@
+#footer {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.container {
+    padding: 7% 10%;
+}
+
+.container p {
+    color: #8f8f8f;
+}
+
+.fab, .far, .fas {
+	margin: 20px 10px;
+}
