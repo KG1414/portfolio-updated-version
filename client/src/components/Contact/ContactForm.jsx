@@ -3,13 +3,31 @@ import './ContactForm.css';
 import onlineWorld from '../../assets/images/online-world.png';
 
 const ContactForm = () => {
-    // const [status, setStatus] = useState("Submit");
+    const [status, setStatus] = useState("Submit");
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setStatus("Sending...");
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setStatus("Sending...");
+        const { name, email, message } = event.target.elements;
+        let details = {
+            name: name.value,
+            email: email.value,
+            message: message.value
+        };
 
-    // }
+        console.log(details);
+
+        let response = await fetch("http://localhost:5000/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(details),
+        });
+        setStatus("Submit");
+        let result = await response.json();
+        alert(result.status);
+    };
 
     return (
         <section className="form-section">
@@ -17,28 +35,28 @@ const ContactForm = () => {
             <img className="main-img mb-4" src={onlineWorld} alt="connect" width="400"></img>
 
             <div className="form-signin">
-                <form onSubmit={"handleSubmit"}>
+                <form onSubmit={handleSubmit}>
 
                     <h1 className="h3 mb-3 fw-normal">Contact Me</h1>
 
                     <div className="form-floating">
-                        <input type="text" name="name" className="form-control top" id="floatingInput"></input>
+                        <input type="text" name="name" className="form-control top" id="floatingInput" required></input>
                         <label for="floatingInput">Name</label>
                     </div>
 
                     <div className="form-floating">
-                        <input type="email" name="email" className="form-control" id="floatingInput"></input>
+                        <input type="email" name="email" className="form-control" id="floatingInput" required></input>
                         <label for="floatingInput">Email address</label>
                     </div>
 
                     <div>
-                        <textarea name="message" rows="3" className="form-control" placeholder="Message"></textarea>
+                        <textarea type="message" name="message" rows="3" className="form-control" placeholder="Message" required></textarea>
                     </div>
 
                     <div className="checkbox mb-3"> {/* remove this later */}
                     </div>
 
-                    <button className="w-100 btn btn-lg btn-primary" type="submit">Send Message</button>
+                    <button className="w-100 btn btn-lg btn-primary" type="submit">{status}</button>
 
                 </form>
             </div>
