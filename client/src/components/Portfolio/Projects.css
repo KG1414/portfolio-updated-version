@@ -1,13 +1,10 @@
 #projects {
-    
     background: #3789C2;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #4794CA, #3789C2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #4794CA, #3789C2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 7% 0%;
     margin: 0;
 }
-
-
 
 .project-wrapper {
     position: relative;
@@ -18,6 +15,8 @@
     padding: 5%;
     border-radius: 30px;
     box-shadow: 0 1px 5px rgb(0 0 0 / 25%), 0 5px 30px rgb(0 0 0 / 50%);
+    max-width: 100%;
+    height: auto;
 }
 
 .project-wrapper-two {
@@ -29,19 +28,75 @@
     padding: 5%;
     border-radius: 30px;
     box-shadow: 0 1px 5px rgb(0 0 0 / 25%), 0 5px 30px rgb(0 0 0 / 50%);
+    max-width: 100%;
+    height: auto;
 }
 
 /* Text */
+
+.project-card-title {
+    font-weight: bold;
+    padding-top: 4%;
+	font-size: 2rem;
+	line-height: 1.2;
+    /* background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%); */
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.05em;
+
+
+    background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.05em;
+}
+
+/* Info Section */
+  
+
+.info-wrapper {
+    position: relative;
+    width: 40%;
+    height: auto;
+}
+
+.description-info {
+    color: #22577A !important;
+}
 
 .info {
     color: white;
 }
 
-/* Info Section */
+.logos-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    text-align: center !important;
+    flex-wrap: nowrap !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
 
-.info-wrapper {
-    width: 40%;
-    height: auto;
+.logos-wrapper-two {
+    width: 100%;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    flex-wrap: nowrap !important;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 /* Image Section */
@@ -66,24 +121,23 @@
 }
 
 #img {
-    width: 150%;
+    width: 110%;
     height: auto;
+    z-index: 100;
 }
 
-.project-title {
-    font-family: "ubuntu";
-    font-weight: bold;
-    padding-top: 4%;
-	font-size: 3.5rem;
-	line-height: 1.2;
-    color: white;
-}
+
 
 .title-desktop {
     display: none;
 }
 
-
+.project-icon {
+        display: flex !important;
+        bottom: 0;
+        color: #ffffff;
+        padding: 20px !important;
+}
 
 /* smaller screen width changes */
 
@@ -92,7 +146,18 @@
         position: relative;
         display: flex;
         flex-direction: column-reverse;
+        padding-bottom: 40%;
+        /* min-height: 100%; */
+        clear: both;
+        padding-left: 0;
+        padding-right: 0;
     }
+
+    .info-wrapper {
+        margin-left: 10%;
+        margin-right: auto;
+    }
+
 
     #title-mobile {
         display: none;
@@ -101,6 +166,7 @@
 
     .outer-img-wrapper {
         width: 100%;
+        padding-left: 10px;
     }
 
     #img {

@@ -9,23 +9,39 @@ const ProjectCard = () => {
             return (
                 <div key={index} id={data.id}>
 
-
-
                     <div className={data.id % 2 === 0 ? "project-wrapper" : "project-wrapper-two"}>
 
-
+                        {/* <div className="info-wrapper" id="parent">
+                            <div className="project-outer" id="title-mobile"><h3 className="project-title">{data.projectTitle}</h3></div>
+                            <div className="info" id="description"><p className="description-info">{data.projectDescription}</p></div>
+                            <div className="info" id="more-info">More info</div>
+                            <div className={data.id % 2 === 0 ? "logos-wrapper" : "logos-wrapper-two"}>
+                                <i className="info project-icon fab fa-github fa-lg"></i>
+                                <i className="info project-icon fab fa-github fa-lg"></i>
+                            </div>
+                        </div> */}
 
                         <div className="info-wrapper" id="parent">
+                            {/* <div className="project-outer" id="title-mobile"><h3 className="project-title">{data.projectTitle}</h3></div> */}
+                            <div className="card-img-overlay border-dark" style={{ width: "18rem" }}>
+                                <div className="card-body">
+                                    <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
+                                    <h6 className="card-subtitle mb-2 text-muted info">Card subtitle</h6>
+                                    <p className="card-text description-info info">{data.projectDescription}</p>
+                                    <a href="/" class="card-link">Card link</a>
+                                    <a href="/" class="card-link">Another link</a>
+                                    {/* <div className={data.id % 2 === 0 ? "logos-wrapper" : "logos-wrapper-two"}>
+                                        <i className="info project-icon fab fa-github fa-lg"></i>
+                                        <i className="info project-icon fab fa-github fa-lg"></i>
+                                    </div> */}
 
-                            <div className="project-outer" id="title-mobile"><h3 className="project-title">{data.projectTitle}</h3></div>
-                            <div className="info" id="description"><p>{data.projectDescription}</p></div>
-                            <div className="info" id="more-info"><a href="/">More info</a></div>
+                                </div>
+                            </div>
                         </div>
-
 
                         <div className="outer-img-wrapper">
                             <div className="projects-img-wrapper">
-                                <img src={data.imgUrl} id="img" className="project-img" alt="project-portfolio"></img>
+                                <img className="project-img" src={data.imgUrl} id="img" alt="project-portfolio"></img>
                             </div>
                         </div>
 

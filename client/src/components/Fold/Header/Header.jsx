@@ -9,14 +9,15 @@ class Header extends React.Component {
         this.state = {
             status: true,
             buttonStatus: true,
-            buttonClicked: true
+            buttonClicked: true,
+            menuColor: true,
         };
     }
 
     componentDidMount() {
         this.listener = document.addEventListener("scroll", event => {
             var scrolled = document.scrollingElement.scrollTop;
-            if (scrolled >= 180) {
+            if (scrolled >= 120) {
                 if (this.state.status) {
                     this.setState({ status: false, buttonStatus: false });
                 }
@@ -32,16 +33,22 @@ class Header extends React.Component {
         document.removeEventListener("scroll", this.listener);
     }
 
+    // onClickHandler = () => {
+    //     if (this.state.menuColor) {
+    //         this.setState({ menuColor: !this.state.menuColor });
+    //     }
+    // }
+
     render() {
         let navBarStyle = { color: "" };
         if (!this.state.status) {
             navBarStyle = {
-                color: "grey"
+                color: "grey",
             };
         };
 
         let buttonStyle = "navbar-toggler navbar-dark";
-        if (!this.state.buttonStatus) {
+        if (!this.state.buttonStatus || !this.state.menuColor) {
             buttonStyle = "navbar-toggler navbar-light";
         }
 
@@ -50,15 +57,20 @@ class Header extends React.Component {
                 <nav style={{
                     backgroundColor: this.state.status ? null : "#fff",
                 }}
-                    className="navbar navbar-expand-md fixed-top">
+
+
+                    className={this.state.menuColor ? "navbar navbar-expand-md fixed-top" : "navbar dropdown navbar-expand-md fixed-top"}>
                     <div className="container-fluid">
                         <a className="navbar-brand"
                             href="/"
-                            style={{ color: this.state.status ? null : "grey" }}
-                        >kyle gallard</a>
+                            style={{ color: this.state.status && this.state.menuColor ? null : "grey" }}
+                        ><i class="fab fa-cloudversify"></i>kyle gallard</a>
+
+                        {/* <i class="fab fa-cloudsmith"></i> */}
+                        {/* <i class="fab fa-cloudversify"></i> */}
 
                         <button
-                            onClick={this.handleClick}
+                            onClick={() => this.setState({ menuColor: !this.state.menuColor })}
                             className={buttonStyle}
                             type="button"
                             data-bs-toggle="collapse"
@@ -71,20 +83,21 @@ class Header extends React.Component {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
-                                    <a style={navBarStyle} className="nav-link" href="/">Home</a>
+                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a style={navBarStyle} className="nav-link" href="/about">About</a>
+                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/about">About</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a style={navBarStyle} className="nav-link" href="/projects">Projects</a>
+                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/projects">Projects</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a style={navBarStyle} className="nav-link" href="/contact">Contact</a>
+                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
+
                 </nav>
 
             </div>

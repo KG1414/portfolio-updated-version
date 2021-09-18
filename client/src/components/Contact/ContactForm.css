@@ -17,20 +17,26 @@
   margin: auto;
 }
 
+.contact-header {
+  font-weight: bold;
+	font-size: 40px;
+    /* background: linear-gradient(to left, #56ccf2, #2f80ed); */
+    /* background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); */
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.05em;
+}
+
 textarea,
 textarea::-webkit-input-placeholder {
     font-size: 14px;
     resize: both;
 }
-
-/* text-area {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  resize: both;
-  min-height: 40px;
-  line-height: 20px;
-} */
 
 .form-signin .checkbox {
   font-weight: 400;
@@ -57,4 +63,8 @@ textarea::-webkit-input-placeholder {
   min-width: 400px;
   height: 100%;
   text-align: center;
+}
+
+.contact-btn {
+  opacity: 0.8;
 }

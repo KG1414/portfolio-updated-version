@@ -8,8 +8,6 @@ import Weather from '../Weather/Weather.js';
 const { id } = Detail;
 const cardElements = Detail.length;
 
-
-
 const About = () => {
     const [visibleCardCount, setVisibleCardCount] = useState();
 
@@ -19,8 +17,7 @@ const About = () => {
         } else if (window.innerWidth >= "800") {
             setVisibleCardCount(4);
         }
-    })
-
+    });
 
     useEffect(() => {
         function handleResize() {

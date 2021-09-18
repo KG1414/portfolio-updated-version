@@ -3,8 +3,12 @@
     background-color: whitesmoke;
 }
 
+.copyright {
+    font-size: 16px !important;
+}
+
 .container {
-    padding: 7% 10%;
+    padding: 5% 10%;
 }
 
 .container p {
@@ -13,4 +17,8 @@
 
 .fab, .far, .fas {
 	margin: 20px 10px;
+}
+
+.container a {
+    color: black;
 }

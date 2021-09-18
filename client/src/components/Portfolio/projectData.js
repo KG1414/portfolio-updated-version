@@ -1,29 +1,47 @@
-import imageOne from '../../assets/images/project-one.png';
+import currentProject from '../../assets/images/current-project.png';
+import secretsProject from '../../assets/images/secrets-project.png';
+import journalProject from '../../assets/images/journal-project.png';
+import keeperProject from '../../assets/images/keeper-project.png';
+import simonGameProject from '../../assets/images/simon-game-project.png';
+import newsletterProject from '../../assets/images/newsletter-project.png';
+
 
 const projectData = [
     {
         id: 1,
-        projectTitle: "My Portfolio",
+        projectTitle: "This Portfolio",
         projectDescription: "This is my first portfolio website.",
-        imgUrl: imageOne
+        imgUrl: currentProject
     },
     {
         id: 2,
-        projectTitle: "Second Project",
-        projectDescription: "The second website.",
-        imgUrl: imageOne
+        projectTitle: "Journal App",
+        projectDescription: "https://github.com/KG1414/journal-app",
+        imgUrl: journalProject
     },
     {
         id: 3,
-        projectTitle: "Third Project",
-        projectDescription: "The third website.",
-        imgUrl: imageOne
+        projectTitle: "Secrets App",
+        projectDescription: "https://github.com/KG1414/security-module",
+        imgUrl: secretsProject
     },
     {
         id: 4,
-        projectTitle: "Fourth Project",
-        projectDescription: "The fourth website.",
-        imgUrl: imageOne
+        projectTitle: "Tasks App",
+        projectDescription: "https://jtzym.csb.app/",
+        imgUrl: keeperProject
+    },
+    {
+        id: 5,
+        projectTitle: "Sign-Up App",
+        projectDescription: "https://obscure-inlet-76312.herokuapp.com/",
+        imgUrl: newsletterProject
+    },
+    {
+        id: 6,
+        projectTitle: "Game App",
+        projectDescription: "Live Site: https://game-app-.glitch.me/   Code: https://glitch.com/edit/#!/game-app-   Github: https://github.com/KG1414/game",
+        imgUrl: simonGameProject
     }
 ];
 

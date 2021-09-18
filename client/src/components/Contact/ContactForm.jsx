@@ -37,7 +37,7 @@ const ContactForm = () => {
             <div className="form-signin">
                 <form onSubmit={handleSubmit}>
 
-                    <h1 className="h3 mb-3 fw-normal">Contact Me</h1>
+                    <h2 className="contact-header">Contact Me</h2>
 
                     <div className="form-floating">
                         <input type="text" name="name" className="form-control top" id="floatingInput" required></input>
@@ -56,7 +56,7 @@ const ContactForm = () => {
                     <div className="checkbox mb-3"> {/* remove this later */}
                     </div>
 
-                    <button className="w-100 btn btn-lg btn-primary" type="submit">{status}</button>
+                    <button className="w-100 btn btn-lg btn-primary contact-btn" type="submit">{status}</button>
 
                 </form>
             </div>

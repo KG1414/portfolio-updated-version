@@ -1,5 +1,6 @@
 .navbar-brand {
     color: whitesmoke;
+    font-size: 2em;
 }
 
 .navbar-brand:hover {
@@ -8,15 +9,22 @@
 
 .nav-link{
     color: whitesmoke;
-    display: inline-block;
+    
+    font-size: 16px;
+    font-weight: lighter;
 }
+
 .nav-link:hover {
     color: black !important;
-    display: inline-block;
+    
 }
 
 .nav-item {
-    padding: 10px 20px;
+    padding: 20px 25px;
+}
+
+.nav-item:last-child {
+    padding-right: 20px;
 }
 
 .navbar-toggler {
@@ -42,11 +50,29 @@
     outline: 0;
     box-shadow: 2px 2px 2px 2px grey !important;
   }
-  
+
+  .navbar.dropdown {
+    background-color: white;
+  }
+
+  .nav-link.navo {
+    color: gray;
+    font-size: 16px;
+    font-weight: lighter;
+  }
+
+  /* .nav-item {
+    transform: translateY(100%);
+  } */
+
 
 /* Updated container fluid */
 .container-fluid {
     padding-left: 10%;
     padding-right: 10%;
 }
+/* 
+.navbar {
+  background-color: black !important;
+} */
 
