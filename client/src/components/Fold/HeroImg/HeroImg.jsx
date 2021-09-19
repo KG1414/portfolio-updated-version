@@ -1,6 +1,8 @@
 import React from 'react';
 import './HeroImg.css';
 import Typewriter from "typewriter-effect";
+import Weather from '../../Weather/Weather.js';
+import '../../Weather/Weather.css';
 
 function HeroImg() {
     return (
@@ -41,6 +43,11 @@ function HeroImg() {
                         <a href="https://www.linkedin.com/in/kylegallard/" target="_blank" rel='noreferrer'><button type="button" class="btn1 btn btn-dark btn-sm download-button"><i class="hero-ic fab fa-linkedin-in fa-lg" style={{ padding: "0%" }}></i>
                             LinkedIn</button></a>
                     </div>
+
+                    <div className="weather-wrapper">
+                        <Weather />
+                    </div>
+
                 </div>
             </div>
 

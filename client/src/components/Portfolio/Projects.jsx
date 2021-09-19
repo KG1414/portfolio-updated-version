@@ -8,7 +8,7 @@ const Projects = () => {
 
         <section id="projects" class="projects-background">
 
-            <h2 className="projects-heading" style={{ marginBottom: "0%" }}>Projects<i className="fas fa-laptop-code"></i></h2>
+            <h2 className="projects-heading">Projects<i className="fas fa-laptop-code"></i></h2>
 
             <ProjectCard />
 

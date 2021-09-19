@@ -30,7 +30,7 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="form-section">
+        <section id="contact-form-section" className="form-section">
 
             <img className="main-img-form mb-4" src={onlineWorld} alt="connect" width="400"></img>
 

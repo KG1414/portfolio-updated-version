@@ -86,13 +86,13 @@ class Header extends React.Component {
                                     <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/about">About</a>
+                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="#about-section">About</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/projects">Projects</a>
+                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="#projects">Projects</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="/contact">Contact</a>
+                                    <a style={navBarStyle} className={this.state.menuColor ? "nav-link" : "nav-link navo"} href="#contact-form-section">Contact</a>
                                 </li>
                             </ul>
                         </div>

@@ -3,7 +3,6 @@ import Carousel from '../Carousel/Carousel';
 import './About.css';
 import Card from '../Card/Card';
 import Detail from '../Card/details.js';
-import Weather from '../Weather/Weather.js';
 
 const { id } = Detail;
 const cardElements = Detail.length;
@@ -42,17 +41,14 @@ const About = () => {
 
                 <h2 className="section-heading">About Me</h2>
                 <hr />
-                <h3>I'm Kyle, a Full Stack Developer based in Melbourne, Australia.</h3>
-                <p>I build functional products that can solve problems, improve efficiency and give a great user experience.</p>
-                <div className="weather-wrapper">
-                    <Weather />
-                </div>
+                <h3 style={{ textAlign: "center" }}>I'm Kyle, a Full Stack Developer based in Melbourne, Australia.</h3>
+                <br />
+                <p>I build functional products to solve problems, improve efficiency and give a great user experience.</p>
+                <br />
+                <p><i>My inspiration to program is so that ideas don't need to remain as just... ideas; instead, they can put be into action.</i></p>
 
                 <h2 className="section-heading" style={{ paddingTop: "40%", marginBottom: "0%", overflow: "none" }}>Tech Stack</h2>
             </div>
-
-
-            {/*  */}
 
             <Carousel visibleCardCount={visibleCardCount} totalElements={cardElements} >
                 <Card key={id} />

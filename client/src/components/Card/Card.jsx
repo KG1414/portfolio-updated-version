@@ -5,16 +5,15 @@ import './Card.css';
 const Card = () => {
     return (
 
-        detail.map((details) => {
+        detail.map((details, index) => {
             return (
-                <div className="column">
+                <div className="column" key={index}>
                     <div className="card h-100">
                         {details.imgURL !== null ?
                             <div className="img-wrapper">
                                 <img
                                     className={details.classDec}
                                     style={{ width: `${details.imgWidth}`, maxWidth: "100%", height: "auto" }}
-                                    key={details.key}
                                     src={details.imgURL}
                                     alt={details.placeholder} />
                             </div>

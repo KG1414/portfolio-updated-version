@@ -12,8 +12,8 @@ const Weather = () => {
         });
 
         axios.get("/weather")
-            .then(response => {
-                console.log(response.data);
+            .then((response, err) => {
+                console.log(response.data + " or " + err);
                 setWeather(
                     response.data.temp
                 )

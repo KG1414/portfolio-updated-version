@@ -16,10 +16,10 @@ const ProjectCard = () => {
                             <div className="card-img-overlay border-dark" style={{ width: "18rem" }}>
                                 <div className="card-body">
                                     <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
-                                    <h6 className="card-subtitle mb-2 text-muted info">Card subtitle</h6>
+                                    <h6 className="card-subtitle mb-2 text-muted info">{data.subTitle}</h6>
                                     <p className="card-text description-info info">{data.projectDescription}</p>
-                                    <a href="/" class="card-link">Card link</a>
-                                    <a href="/" class="card-link">Another link</a>
+                                    <a href={data.linkOne} class="card-link" target="_blank" rel='noreferrer'>{data.linkTitleOne}</a>
+                                    <a href={data.linkTwo} class="card-link" target="_blank" rel='noreferrer'>{data.linkTitleTwo}</a>
 
                                 </div>
                             </div>
