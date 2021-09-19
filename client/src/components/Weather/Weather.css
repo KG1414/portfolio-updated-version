@@ -1,0 +1,25 @@
+
+
+.accordion {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    padding-left: 0%;
+    right: 20px;
+}
+
+.accordion-item {
+    border: hidden !important;
+    color: none;
+}
+
+.accordion-header {
+    color: grey;
+}
+
+.weather {
+    color: grey;
+    font-size: 10px;
+}
+

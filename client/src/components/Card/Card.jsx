@@ -21,7 +21,7 @@ const Card = () => {
                             : <div className="img-wrapper"><i className={`${details.classDec}`}></i></div>
                         }
 
-                        <div className="card-header p-3 mb-2 text-white">
+                        <div className="card-header p-3 mb-2">
                             {details.title}
                         </div>
                         <div className="card-body">

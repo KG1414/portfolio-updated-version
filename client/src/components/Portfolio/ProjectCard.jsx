@@ -11,18 +11,8 @@ const ProjectCard = () => {
 
                     <div className={data.id % 2 === 0 ? "project-wrapper" : "project-wrapper-two"}>
 
-                        {/* <div className="info-wrapper" id="parent">
-                            <div className="project-outer" id="title-mobile"><h3 className="project-title">{data.projectTitle}</h3></div>
-                            <div className="info" id="description"><p className="description-info">{data.projectDescription}</p></div>
-                            <div className="info" id="more-info">More info</div>
-                            <div className={data.id % 2 === 0 ? "logos-wrapper" : "logos-wrapper-two"}>
-                                <i className="info project-icon fab fa-github fa-lg"></i>
-                                <i className="info project-icon fab fa-github fa-lg"></i>
-                            </div>
-                        </div> */}
-
                         <div className="info-wrapper" id="parent">
-                            {/* <div className="project-outer" id="title-mobile"><h3 className="project-title">{data.projectTitle}</h3></div> */}
+
                             <div className="card-img-overlay border-dark" style={{ width: "18rem" }}>
                                 <div className="card-body">
                                     <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
@@ -30,10 +20,6 @@ const ProjectCard = () => {
                                     <p className="card-text description-info info">{data.projectDescription}</p>
                                     <a href="/" class="card-link">Card link</a>
                                     <a href="/" class="card-link">Another link</a>
-                                    {/* <div className={data.id % 2 === 0 ? "logos-wrapper" : "logos-wrapper-two"}>
-                                        <i className="info project-icon fab fa-github fa-lg"></i>
-                                        <i className="info project-icon fab fa-github fa-lg"></i>
-                                    </div> */}
 
                                 </div>
                             </div>

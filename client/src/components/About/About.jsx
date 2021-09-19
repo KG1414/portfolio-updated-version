@@ -39,14 +39,20 @@ const About = () => {
     return (
         <section className="about" id="about-section">
             <div className="about-container">
-                <h2 className="section-heading"><i className="fas fa-laptop-code"></i>About Me</h2>
+
+                <h2 className="section-heading">About Me</h2>
                 <hr />
                 <h3>I'm Kyle, a Full Stack Developer based in Melbourne, Australia.</h3>
-                <p style={{ color: "grey", fontSize: "18px", fontWeight: "initial" }}>My goal is to build functional products that can solve problems, improve efficiency and give a great user experience.</p>
+                <p style={{ color: "grey", fontSize: "18px", fontWeight: "initial" }}>I build functional products that can solve problems, improve efficiency and give a great user experience.</p>
+                <div className="weather-wrapper">
+                    <Weather />
+                </div>
+
+                <h2 className="section-heading" style={{ paddingTop: "40%", marginBottom: "0%" }}>Technology Stack</h2>
             </div>
 
-            <Weather />
 
+            {/*  */}
 
             <Carousel visibleCardCount={visibleCardCount} totalElements={cardElements} >
                 <Card key={id} />

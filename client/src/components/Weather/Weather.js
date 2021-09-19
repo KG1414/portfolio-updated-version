@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Weather.css';
 
 const Weather = () => {
     const [weather, setWeather] = useState("");
@@ -20,11 +21,21 @@ const Weather = () => {
     };
 
     return (
-        <div>
-            <button onClick={handleButtonClick}>Get weather in Melbourne</button>
-            {toggle ? <h1> The weather in Melbourne is {weather} degrees celsius</h1> : null}
+        <div className="accordion" id="accordionExample">
+            <div className="accordion-item">
+                <h2 className="accordion-header" id="headingOne">
+                    <button onClick={handleButtonClick} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span className="weather">Click here for weather in Melbourne.</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                        {toggle ? <p>The weather in Melbourne is {weather} degrees celsius</p> : null}
+                    </div>
+                </div>
+            </div>
         </div>
     )
-}
+};
 
 export default Weather;

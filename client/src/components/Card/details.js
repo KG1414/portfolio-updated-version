@@ -1,8 +1,13 @@
+import firebase from '../../assets/images/logo_firebase.png';
+
+// If importing a logo file or url use <imgURL> and leave <classDec> blank.
+// If using classes use <classDec> and the value for <imgURL> should be changed to null.
+
 const details = [
     {
         id: 1,
         imgURL: "https://nakedsecurity.sophos.com/wp-content/uploads/sites/2/2017/01/mongodb.png?resize=780,408",
-        imgWidth: "",
+        imgWidth: "300px",
         title: "MongoDB",
         description: "Document-oriented NoSQL database management program with scalability and flexibility.",
         classDec: "",
@@ -11,7 +16,7 @@ const details = [
     {
         id: 2,
         imgURL: "https://buttercms.com/static/images/tech_banners/ExpressJS.8587dd0647ca.png",
-        imgWidth: "180px",
+        imgWidth: "160px",
         title: "ExpressJS",
         description: "Back end web application framework for Node.js for building web applications and API's.",
         classDec: "",
@@ -37,12 +42,12 @@ const details = [
     },
     {
         id: 5,
-        imgURL: "https://via.placeholder.com/300x300",
+        imgURL: null,
         imgWidth: "",
         title: "Bootstrap",
         description: "No description.",
-        classDec: "",
-        placeholder: ""
+        classDec: "fab fa-bootstrap fa-4x",
+        placeholder: "bootstrap"
     },
     {
         id: 5,
@@ -50,26 +55,26 @@ const details = [
         imgWidth: "",
         title: "Javascript",
         description: "No description.",
-        classDec: "fab fa-js-square fa-5x",
-        placeholder: ""
+        classDec: "fab fa-js-square fa-4x",
+        placeholder: "javascript"
     },
     {
         id: 7,
-        imgURL: "https://via.placeholder.com/300x300",
-        imgWidth: "",
-        title: "MongoDB",
-        description: "An open source NoSQL database management program.",
+        imgURL: firebase,
+        imgWidth: "80px",
+        title: "Firebase",
+        description: "?????????",
         classDec: "",
-        placeholder: "mongodb-logo"
+        placeholder: "firebase-logo"
     },
     {
         id: 8,
         imgURL: "https://via.placeholder.com/300x300",
         imgWidth: "",
         title: "MongoDB",
-        description: "An open source NoSQL database management program.",
+        description: ".....................",
         classDec: "",
-        placeholder: "mongodb-logo"
+        placeholder: ""
     }
 ];
 

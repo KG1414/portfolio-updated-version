@@ -9,16 +9,13 @@ p {
     line-height: 1.5;
 }
 
-.about {
-    text-align: left;
-    padding-bottom: 7%;
-}
+
+
 
 .section-heading {
+    text-align: center;
     font-weight: bolder;
 	font-size: 64px;
-    /* background-color: #74EBD5;
-    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%); */
     background: #36D1DC;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -32,11 +29,17 @@ background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, F
 }
 
 .about-container {
-    padding: 7% 20%;
+    padding: 20% 20% 2% 20%;
+    overflow-x:hidden !important;
+    width: 100% !important;
 }
 
 .carousel-inner, .carousel-item, .fab {
     display: inline-block;
+}
+
+#about-section {
+    padding-bottom: 30%;
 }
 
 /* img {
