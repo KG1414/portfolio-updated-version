@@ -9,28 +9,23 @@ p {
     line-height: 1.5;
 }
 
-
-
-
 .section-heading {
     text-align: center;
     font-weight: bolder;
 	font-size: 64px;
     background: #36D1DC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    
-
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.05em;
+    white-space:pre-wrap !important;
 }
 
 .about-container {
     padding: 20% 20% 2% 20%;
-    overflow-x:hidden !important;
+    overflow-x: hidden !important;
     width: 100% !important;
 }
 
@@ -42,10 +37,38 @@ background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, F
     padding-bottom: 30%;
 }
 
-/* img {
-    height: "800";
-    width: "400";
-} */
+@media screen and (max-width: 800px)  {
+    .section-heading {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 30px;
+        background: #36D1DC;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.05em;
+        white-space:pre-wrap !important;
+    }
 
+    h3 {
+        line-height: 1.5;
+        font-size: 20px;
+    }
+    
+    p {
+        color: #8f8f8f;
+        font-size: 16px !important;
+        line-height: 1.5;
+    }
+
+    .about-container {
+        padding: 20% 10% 2% 10%;
+        overflow-x: hidden !important;
+        width: 100% !important;
+
+    }
+}
 
 

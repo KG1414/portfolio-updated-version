@@ -11,9 +11,8 @@
 } */
 
 body, html {
-    font-family: 'Bebas Neue', cursive;
     text-align: 'center';
-    overflow-x:hidden !important;
+    overflow-x: hidden !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -30,6 +29,7 @@ h3 {
 }
 
 p {
+    font-family: 'spartan', sans-serif;
     line-height: 21px;
 }
 
@@ -41,5 +41,7 @@ p {
 .container {
     padding: 7% 15%;
 }
+
+
 
 

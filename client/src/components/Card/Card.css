@@ -2,18 +2,17 @@
   border: hidden;
 }
 
-.card-header {
-  text-align: center;
-}
-
 .card-text {
   font-size: 16px !important;
+  font-family: 'spartan', sans-serif !important;
 }
 
 .card-header {
   background: #3789C2;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #4794CA, #3789C2);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #4794CA, #3789C2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  color: white;
 }
 
 .img-wrapper {
@@ -41,5 +40,11 @@
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  @media screen and (max-width: 800px)  {
+    .card-text {
+      font-size: 12px !important;
     }
   }

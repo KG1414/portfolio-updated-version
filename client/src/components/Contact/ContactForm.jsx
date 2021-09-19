@@ -32,25 +32,25 @@ const ContactForm = () => {
     return (
         <section className="form-section">
 
-            <img className="main-img mb-4" src={onlineWorld} alt="connect" width="400"></img>
+            <img className="main-img-form mb-4" src={onlineWorld} alt="connect" width="400"></img>
 
             <div className="form-signin">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} autoComplete="chrome-off">
 
                     <h2 className="contact-header">Contact Me</h2>
 
                     <div className="form-floating">
-                        <input type="text" name="name" className="form-control top" id="floatingInput" required></input>
+                        <input type="text" name="name" className="form-control top" id="floatingInput" autoComplete="off chrome-off" required></input>
                         <label for="floatingInput">Name</label>
                     </div>
 
                     <div className="form-floating">
-                        <input type="email" name="email" className="form-control" id="floatingInput" required></input>
+                        <input type="email" name="email" className="form-control" id="floatingInput" autoComplete="off chrome-off" required></input>
                         <label for="floatingInput">Email address</label>
                     </div>
 
                     <div>
-                        <textarea type="message" name="message" rows="3" className="form-control" placeholder="Message" required></textarea>
+                        <textarea type="message" name="message" rows="3" className="form-control" placeholder="Message" autoComplete="off chrome-off" required></textarea>
                     </div>
 
                     <div className="checkbox mb-3"> {/* remove this later */}

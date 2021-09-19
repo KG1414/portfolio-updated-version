@@ -9,7 +9,7 @@
 
 .nav-link{
     color: whitesmoke;
-    
+    letter-spacing: 0.1em;
     font-size: 16px;
     font-weight:lighter;
 }
@@ -60,11 +60,6 @@
     font-size: 16px;
     font-weight: lighter;
   }
-
-  /* .nav-item {
-    transform: translateY(100%);
-  } */
-
 
 /* Updated container fluid */
 .container-fluid {

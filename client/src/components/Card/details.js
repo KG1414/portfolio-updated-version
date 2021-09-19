@@ -16,7 +16,7 @@ const details = [
     {
         id: 2,
         imgURL: "https://buttercms.com/static/images/tech_banners/ExpressJS.8587dd0647ca.png",
-        imgWidth: "160px",
+        imgWidth: "120px",
         title: "ExpressJS",
         description: "Back end web application framework for Node.js for building web applications and API's.",
         classDec: "",
@@ -28,7 +28,7 @@ const details = [
         imgWidth: "",
         title: "React.js",
         description: "A front-end Javascript library for building user interfaces or UI components in declarative code.",
-        classDec: "fab fa-react fa-5x icn-spinner",
+        classDec: "fab fa-react fa-4x icn-spinner",
         placeholder: "react"
     },
     {
@@ -37,7 +37,7 @@ const details = [
         imgWidth: "",
         title: "Node.js",
         description: "An open-source, cross-platform, back-end Javascript runtime environment.",
-        classDec: "fab fa-node fa-5x",
+        classDec: "fab fa-node fa-4x",
         placeholder: "node-js"
     },
     {
@@ -61,7 +61,7 @@ const details = [
     {
         id: 7,
         imgURL: firebase,
-        imgWidth: "80px",
+        imgWidth: "60px",
         title: "Firebase",
         description: "?????????",
         classDec: "",
