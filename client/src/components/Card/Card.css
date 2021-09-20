@@ -3,9 +3,10 @@
 }
 
 .card-text {
-  font-size: 16px !important;
+  font-size: 14px !important;
   font-family: 'spartan', sans-serif !important;
 }
+
 
 .card-header {
   background: #3789C2;  /* fallback for old browsers */
@@ -15,17 +16,22 @@
   color: white;
 }
 
-.img-wrapper {
-   height: 150px;
+.carousel-card-img-wrapper {
+   height: 100px;
     width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 5px;
-    margin: 0px;
+    margin: 10% 0;
     overflow: hidden;
 }
+
+.card-body.carousel-card {
+    padding-bottom: 10%;
+    padding-top: 10%;
+} 
 
 .icn-spinner {
     animation: spin-animation 15s infinite;

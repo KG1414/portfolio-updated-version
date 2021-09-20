@@ -11,12 +11,19 @@ const projectData = [
         id: 1,
         projectTitle: "My Portfolio",
         subTitle: "This current Portfolio",
-        projectDescription: "This is my first portfolio website. ",
+        projectDescription: "Current Website. Created with mainly custom features including the carousel and cards. The Contact Me form uses an API and there is also an inconspicuous Weather API to be found.",
         imgUrl: currentProject,
         linkTitleOne: "",
         linkTitleTwo: "",
         linkOne: "",
-        linkTwo: ""
+        linkTwo: "",
+        badgeOne: "React",
+        badgeTwo: "JS",
+        badgeThree: "Express",
+        badgeFour: "API",
+        badgeFive: "Bootstrap",
+        badgeSix: "NodeJS",
+        BadgeSeven: ""
     },
     {
         id: 2,
@@ -27,7 +34,14 @@ const projectData = [
         linkTitleOne: "Github",
         linkTitleTwo: "",
         linkOne: "https://github.com/KG1414/journal-app",
-        linkTwo: ""
+        linkTwo: "",
+        badgeOne: "React",
+        badgeTwo: "JS",
+        badgeThree: "Express",
+        badgeFour: "API",
+        badgeFive: "Bootstrap",
+        badgeSix: "",
+        BadgeSeven: ""
     },
     {
         id: 3,
@@ -38,7 +52,14 @@ const projectData = [
         linkTitleOne: "Github",
         linkTitleTwo: "",
         linkOne: "https://github.com/KG1414/security-module",
-        linkTwo: ""
+        linkTwo: "",
+        badgeOne: "React",
+        badgeTwo: "JS",
+        badgeThree: "Express",
+        badgeFour: "API",
+        badgeFive: "Bootstrap",
+        badgeSix: "",
+        BadgeSeven: ""
     },
     {
         id: 4,
@@ -49,7 +70,14 @@ const projectData = [
         linkTitleOne: "Website",
         linkTitleTwo: "",
         linkOne: "https://jtzym.csb.app/",
-        linkTwo: ""
+        linkTwo: "",
+        badgeOne: "React",
+        badgeTwo: "JS",
+        badgeThree: "Express",
+        badgeFour: "",
+        badgeFive: "Bootstrap",
+        badgeSix: "",
+        BadgeSeven: ""
     },
     {
         id: 5,
@@ -60,18 +88,34 @@ const projectData = [
         linkTitleOne: "Website",
         linkTitleTwo: "",
         linkOne: "https://obscure-inlet-76312.herokuapp.com/",
-        linkTwo: ""
+        linkTwo: "",
+        badgeOne: "React",
+        badgeTwo: "MongoDB",
+        badgeThree: "Express",
+        badgeFour: "API",
+        badgeFive: "Bootstrap",
+        badgeSix: "Mongoose",
+        BadgeSeven: "JS"
     },
     {
         id: 6,
         projectTitle: "Game App",
         subTitle: "",
-        projectDescription: "Live Site: https://game-app-.glitch.me/   Code: https://glitch.com/edit/#!/game-app-   Github: https://github.com/KG1414/game",
+        projectDescription: "",
         imgUrl: simonGameProject,
         linkTitleOne: "Website",
         linkTitleTwo: "Github",
+        linkTitleThree: "Glitch-Code",
         linkOne: "https://game-app-.glitch.me/",
-        linkTwo: "https://github.com/KG1414/game"
+        linkTwo: "https://github.com/KG1414/game",
+        LinkThree: "https://glitch.com/edit/#!/game-app-",
+        badgeOne: "React",
+        badgeTwo: "JS",
+        badgeThree: "jQuery",
+        badgeFour: "HTML",
+        badgeFive: "CSS",
+        badgeSix: "",
+        BadgeSeven: ""
     }
 ];
 

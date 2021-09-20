@@ -1,6 +1,5 @@
 import React from 'react';
 import projectData from './projectData.js';
-
 import './Projects.css';
 
 const ProjectCard = () => {
@@ -11,18 +10,33 @@ const ProjectCard = () => {
 
                     <div className={data.id % 2 === 0 ? "project-wrapper" : "project-wrapper-two"}>
 
+
                         <div className="info-wrapper" id="parent">
 
-                            <div className="card-img-overlay border-dark" style={{ width: "18rem" }}>
-                                <div className="card-body">
+                            <div className="card-img-overlay border-dark">
+                                <div className="card-body project-body">
                                     <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
-                                    <h6 className="card-subtitle mb-2 text-muted info">{data.subTitle}</h6>
+                                    {/* <h6 className="card-subtitle mb-2 text-muted info">{data.subTitle}</h6> */}
                                     <p className="card-text description-info info">{data.projectDescription}</p>
-                                    <a href={data.linkOne} class="card-link" target="_blank" rel='noreferrer'>{data.linkTitleOne}</a>
-                                    <a href={data.linkTwo} class="card-link" target="_blank" rel='noreferrer'>{data.linkTitleTwo}</a>
+                                    <a href={data.linkOne} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleOne}</span></a>
+                                    <a href={data.linkTwo} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleTwo}</span></a>
+                                    <a href={data.LinkThree} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleThree}</span></a>
+
+                                    <div id="tech-badges">
+                                        <span class="badge bg-primary">{data.badgeOne}</span>
+                                        <span class="badge bg-primary">{data.badgeTwo}</span>
+                                        <span class="badge bg-primary">{data.badgeThree}</span>
+                                        <span class="badge bg-primary">{data.badgeFour}</span>
+                                        <span class="badge bg-primary">{data.badgeFive}</span>
+                                        <span class="badge bg-primary">{data.badgeSix}</span>
+                                        <span class="badge bg-primary">{data.badgeSeven}</span>
+                                    </div>
+
 
                                 </div>
+
                             </div>
+
                         </div>
 
                         <div className="outer-img-wrapper">
