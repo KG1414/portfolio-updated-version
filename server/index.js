@@ -10,10 +10,11 @@ const port = 5000;
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", router);
+
 
 // app.get("/", (req, res) => {
 //     res.sendFile(path.join(__dirname, '../client/public/index.html'));
@@ -79,6 +80,10 @@ app.get("/weather", (req, res) => {
 
         }
     })
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/public/index.html'));
 });
 
 app.listen(port, () => console.log(`Example app listening on port:${port}`));
