@@ -35,17 +35,17 @@ const ProjectCard = () => {
 
                                     <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
                                     {/* <h6 className="card-subtitle mb-2 text-muted info">{data.subTitle}</h6> */}
-                                    <p className="card-text description-info info">{wrapText ? <button type="button" class="btn btn-primary" id="liveToastBtn">Info</button> : data.projectDescription}</p>
+                                    <p className="card-text description-info info">{wrapText ? <button type="button" className="btn btn-primary" id="liveToastBtn">Info</button> : data.projectDescription}</p>
                                     {/* 
                                     <div className="toasty position-fixed bottom-0 end-0 p-3">
                                         <div id="liveToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                                            <div class="toast-header">
+                                            <div className="toast-header">
                                                 <img src="..." className="rounded me-2" alt="..."></img>
-                                                <strong class="me-auto">Bootstrap</strong>
+                                                <strong className="me-auto">Bootstrap</strong>
                                                 <small>11 mins ago</small>
                                                 <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                                             </div>
-                                            <div class="toast-body">
+                                            <div className="toast-body">
                                                 Hello, world! This is a toast message.
                                             </div>
                                         </div>
@@ -57,16 +57,16 @@ const ProjectCard = () => {
                                     <a href={data.LinkThree} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleThree}</span></a>
 
                                     <div id="tech-badges">
-                                        <span class="badge bg-primary">{data.badgeOne}</span>
-                                        <span class="badge bg-primary">{data.badgeTwo}</span>
-                                        <span class="badge bg-primary">{data.badgeThree}</span>
-                                        <span class="badge bg-primary">{data.badgeFour}</span>
-                                        <span class="badge bg-primary">{data.badgeFive}</span>
-                                        <span class="badge bg-primary">{data.badgeSix}</span>
-                                        <span class="badge bg-primary">{data.badgeSeven}</span>
-                                        <span class="badge bg-primary">{data.badgeEight}</span>
-                                        <span class="badge bg-primary">{data.badgeNine}</span>
-                                        <span class="badge bg-primary">{data.badgeTen}</span>
+                                        <span className="badge bg-primary">{data.badgeOne}</span>
+                                        <span className="badge bg-primary">{data.badgeTwo}</span>
+                                        <span className="badge bg-primary">{data.badgeThree}</span>
+                                        <span className="badge bg-primary">{data.badgeFour}</span>
+                                        <span className="badge bg-primary">{data.badgeFive}</span>
+                                        <span className="badge bg-primary">{data.badgeSix}</span>
+                                        <span className="badge bg-primary">{data.badgeSeven}</span>
+                                        <span className="badge bg-primary">{data.badgeEight}</span>
+                                        <span className="badge bg-primary">{data.badgeNine}</span>
+                                        <span className="badge bg-primary">{data.badgeTen}</span>
                                     </div>
 
                                 </div>

@@ -64,10 +64,7 @@ class Header extends React.Component {
                         <a className="navbar-brand"
                             href="/"
                             style={{ color: this.state.status && this.state.menuColor ? null : "grey" }}
-                        ><i class="fab fa-cloudversify"></i>kyle gallard</a>
-
-                        {/* <i class="fab fa-cloudsmith"></i> */}
-                        {/* <i class="fab fa-cloudversify"></i> */}
+                        ><i className="fab fa-cloudversify"></i>kyle gallard</a>
 
                         <button
                             onClick={() => this.setState({ menuColor: !this.state.menuColor })}

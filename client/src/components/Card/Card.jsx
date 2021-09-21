@@ -24,7 +24,7 @@ const Card = () => {
                             {details.title}
                         </div>
                         <div className="card-body carousel-card">
-                            <p class="card-text">{details.description}</p>
+                            <p className="card-text">{details.description}</p>
                         </div>
                     </div>
                 </div>

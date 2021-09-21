@@ -6,7 +6,7 @@ import './Projects.css';
 const Projects = () => {
     return (
 
-        <section id="projects" class="projects-background">
+        <section id="projects" className="projects-background">
 
             <h2 className="projects-heading">Projects<i className="fas fa-laptop-code"></i></h2>
 

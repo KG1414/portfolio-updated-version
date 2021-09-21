@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", router);
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/public/index.html'));
-});
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, '../client/public/index.html'));
+// });
 
 const contactEmail = nodemailer.createTransport({
     host: 'smtp.gmail.com',

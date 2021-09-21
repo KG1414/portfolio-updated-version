@@ -28,7 +28,7 @@ const Weather = () => {
                         <span className="weather">Click here for weather in Melbourne.</span>
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
                         {toggle ? <p>The weather in Melbourne is {weather} degrees celsius</p> : null}
                     </div>

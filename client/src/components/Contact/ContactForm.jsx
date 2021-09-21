@@ -41,12 +41,12 @@ const ContactForm = () => {
 
                     <div className="form-floating">
                         <input type="text" name="name" className="form-control top" id="floatingInput" autoComplete="off chrome-off" required></input>
-                        <label for="floatingInput">Name</label>
+                        <label htmlFor="floatingInput">Name</label>
                     </div>
 
                     <div className="form-floating">
                         <input type="email" name="email" className="form-control" id="floatingInput" autoComplete="off chrome-off" required></input>
-                        <label for="floatingInput">Email address</label>
+                        <label htmlFor="floatingInput">Email address</label>
                     </div>
 
                     <div>
