@@ -5,20 +5,18 @@ const request = require("request");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const app = express();
+
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
-app.use(express.urlencoded({ extended: true }));
 
-app.use("/", router);
-
-
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/public/index.html'));
-// });
+// app.use("/", router);
 
 const contactEmail = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -82,8 +80,11 @@ app.get("/weather", (req, res) => {
     })
 });
 
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/public/index.html'));
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 app.listen(port, () => console.log(`Example app listening on port:${port}`));

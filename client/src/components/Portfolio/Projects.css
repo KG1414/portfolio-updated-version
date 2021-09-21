@@ -8,7 +8,7 @@
 }
 
 .toasty {
-    z-index: 11;
+    z-index: 11 !important;
 }
 
 /* new code below */

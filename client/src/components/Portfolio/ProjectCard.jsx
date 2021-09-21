@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import projectData from './projectData.js';
 import './Projects.css';
-// const bootstrap = require('bootstrap');
+const bootstrap = require('bootstrap');
 
 const ProjectCard = () => {
     const [wrapText, setWrapText] = useState(false);
@@ -12,16 +12,14 @@ const ProjectCard = () => {
         }
     });
 
-    // var toastTrigger = document.getElementById('liveToastBtn')
-    // var toastLiveExample = document.getElementById('liveToast')
-    // if (toastTrigger) {
-    //     toastTrigger.addEventListener('click', function () {
-    //         var toast = new bootstrap.Toast(toastLiveExample)
-
-    //         toast.show()
-    //     })
-    // }
-
+    var toastTrigger = document.getElementById('liveToastBtn')
+    var toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+        toastTrigger.addEventListener('click', function () {
+            var toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()
+        })
+    };
 
     return (
         projectData.map((data, index) => {
@@ -35,9 +33,9 @@ const ProjectCard = () => {
 
                                     <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
                                     {/* <h6 className="card-subtitle mb-2 text-muted info">{data.subTitle}</h6> */}
-                                    <p className="card-text description-info info">{wrapText ? <button type="button" className="btn btn-primary" id="liveToastBtn">Info</button> : data.projectDescription}</p>
-                                    {/* 
-                                    <div className="toasty position-fixed bottom-0 end-0 p-3">
+                                    <p className="card-text description-info info">{!wrapText ? <button type="button" className="btn btn-primary" id="liveToastBtn">Info</button> : data.projectDescription}</p>
+
+                                    <div className="toasty position-fixed bottom-0 end-0 p-3" style={{ zIndex: "11" }}>
                                         <div id="liveToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
                                             <div className="toast-header">
                                                 <img src="..." className="rounded me-2" alt="..."></img>
@@ -49,7 +47,7 @@ const ProjectCard = () => {
                                                 Hello, world! This is a toast message.
                                             </div>
                                         </div>
-                                    </div> */}
+                                    </div>
 
 
                                     <a href={data.linkOne} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleOne}</span></a>
