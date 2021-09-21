@@ -16,7 +16,7 @@ app.use(express.json());
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-// app.use("/", router);
+app.use("/", router);
 
 const contactEmail = nodemailer.createTransport({
     host: 'smtp.gmail.com',
