@@ -1,4 +1,5 @@
 import firebase from '../../assets/images/logo_firebase.png';
+import mongooseLogo from '../../assets/images/pngfind.com-js-logo-png-4309574.png';
 
 // If importing a logo file or url use <imgURL> and leave <classDec> blank.
 // If using classes use <classDec> and the value for <imgURL> should be changed to null.
@@ -45,7 +46,7 @@ const details = [
         imgURL: null,
         imgWidth: "",
         title: "Bootstrap",
-        description: "No description.",
+        description: "Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development..",
         classDec: "fab fa-bootstrap fa-4x",
         placeholder: "bootstrap"
     },
@@ -54,7 +55,7 @@ const details = [
         imgURL: null,
         imgWidth: "",
         title: "Javascript",
-        description: "No description.",
+        description: "JavaScript is a scripting or programming language that allows you to implement complex features on web pages.",
         classDec: "fab fa-js-square fa-4x",
         placeholder: "javascript"
     },
@@ -63,16 +64,16 @@ const details = [
         imgURL: firebase,
         imgWidth: "60px",
         title: "Firebase",
-        description: "?????????",
+        description: "The Firebase Realtime Database is a cloud-hosted NoSQL database that lets you store and sync data between your users in realtime.",
         classDec: "",
         placeholder: "firebase-logo"
     },
     {
         id: 8,
-        imgURL: "https://via.placeholder.com/300x300",
-        imgWidth: "",
-        title: "MongoDB",
-        description: ".....................",
+        imgURL: mongooseLogo,
+        imgWidth: "140px",
+        title: "Mongoose JS",
+        description: "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.",
         classDec: "",
         placeholder: ""
     }

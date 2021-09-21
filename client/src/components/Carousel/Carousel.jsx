@@ -52,7 +52,7 @@ const Carousel = (props) => {
 
         <div className="outer-carousel">
 
-            <button onClick={prev} className="left-arrow"><i class="fas fa-angle-double-left fa-2x"></i></button>
+            <button onClick={prev} className="left-arrow"><i className="fas fa-angle-double-left fa-2x"></i></button>
 
             <div className="carousel-container">
                 <div className="carousel-wrapper">
@@ -72,7 +72,7 @@ const Carousel = (props) => {
             </div>
 
             {currentIndex < (totalElements - visibleCardCount) &&
-                <button onClick={next} className="right-arrow"><i class="fas fa-angle-double-right fa-2x"></i></button>
+                <button onClick={next} className="right-arrow"><i className="fas fa-angle-double-right fa-2x"></i></button>
             }
 
         </div>
