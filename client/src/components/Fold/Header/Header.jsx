@@ -33,11 +33,11 @@ class Header extends React.Component {
         document.removeEventListener("scroll", this.listener);
     }
 
-    // onClickHandler = () => {
-    //     if (this.state.menuColor) {
-    //         this.setState({ menuColor: !this.state.menuColor });
-    //     }
-    // }
+    onClickHandler = () => {
+        if (this.state.menuColor) {
+            this.setState({ menuColor: !this.state.menuColor });
+        }
+    }
 
     render() {
         let navBarStyle = { color: "" };
@@ -51,6 +51,7 @@ class Header extends React.Component {
         if (!this.state.buttonStatus || !this.state.menuColor) {
             buttonStyle = "navbar-toggler navbar-light";
         }
+
 
         return (
             <div>

@@ -20,7 +20,6 @@ const About = () => {
 
     useEffect(() => {
         function handleResize() {
-            console.log('resized to: ', window.innerWidth)
             if (window.innerWidth < "800") {
                 setVisibleCardCount(2);
             } else if (window.innerWidth >= "800") {
