@@ -11,6 +11,10 @@
     z-index: 11 !important;
 }
 
+.card-link-info {
+    font-size: 16px;
+}
+
 /* new code below */
 .project-body {
     height: 100%;
@@ -101,7 +105,7 @@ div #tech-badges {
 }
 
 .description-info {
-    margin-top: 10%;
+    margin-top: 6%;
     color: #22577A !important;
     line-height: 2;
 }
@@ -187,13 +191,13 @@ div #tech-badges {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .card-text.description-info.info {
         font-size: 12px !important;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
     .project-wrapper, .project-wrapper-two {
         position: relative;
         display: flex;
@@ -282,6 +286,10 @@ div #tech-badges {
         font-size: 12px;
     }
 
+    .card-link-info {
+        font-size: 12px;
+    }
+
     .badge {
         overflow: hidden;
     }
@@ -295,7 +303,7 @@ div #tech-badges {
     }
 
     .description-info {
-        margin-top: 0%;
+        margin-top: 5%;
         color: #22577A !important;
         line-height: 1.5;
     }

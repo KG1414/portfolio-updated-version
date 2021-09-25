@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import projectData from './projectData.js';
 import './Projects.css';
 
+// import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
@@ -14,52 +14,13 @@ const style = {
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
+    border: 'none',
     boxShadow: 24,
     p: 4,
 };
 
 const ProjectCard = () => {
     const [wrapText, setWrapText] = useState();
-    // const [open, setOpen] = useState(false);
-
-    // const [selectedProject, setSelectedProject] = useState(null);
-
-    // const handleOpen = (project) => {
-    //     setSelectedProject(project);
-    //     setOpen(true);
-    // }
-
-    // const handleClose = () => {
-    //     setSelectedProject(null);
-    //     setOpen(true);
-    // }
-
-
-    //////////////////////
-    var defaultProject = {
-        id: 7,
-        num: 7,
-        projectTitle: "Sample App",
-        subTitle: "",
-        projectDescription: "Sample Description",
-        imgUrl: "Sample Img",
-        linkTitleOne: "Sample Link",
-        linkTitleTwo: "",
-        linkOne: "https://github.com/KG1414/security-module",
-        linkTwo: "",
-        badgeOne: "React",
-        badgeTwo: "JS",
-        badgeThree: "Express",
-        badgeFour: "API",
-        badgeFive: "Bootstrap",
-        badgeSix: "EJS",
-        badgeSeven: "PassportJS",
-        badgeEight: "MongoDB",
-        badgeNine: "Mongoose",
-        badgeTen: ""
-    }
-
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const [selectedProject, setSelectedProject] = useState(null);
 
@@ -74,21 +35,19 @@ const ProjectCard = () => {
         setModalIsOpen(false);
     }
 
-    //////////////////////
-
     window.addEventListener('load', (event) => {
-        if (window.innerWidth < "800") {
+        if (window.innerWidth < "1100") {
             setWrapText(1);
-        } else if (window.innerWidth >= "800") {
+        } else if (window.innerWidth >= "1100") {
             setWrapText(2);
         }
     });
 
     useEffect(() => {
         function handleResize() {
-            if (window.innerWidth < "800") {
+            if (window.innerWidth < "1000") {
                 setWrapText(1);
-            } else if (window.innerWidth >= "800") {
+            } else if (window.innerWidth >= "1000") {
                 setWrapText(2);
             }
         }
@@ -100,15 +59,13 @@ const ProjectCard = () => {
         }
     });
 
-
-
     return (
         <div>
             {projectData.map((data, index) => {
 
                 return (
                     <div key={index} id={data.id}>
-                        <div className={data.id % 2 === 0 ? "project-wrapper" : "project-wrapper-two"}>
+                        <div className={data.id % false === 0 ? "project-wrapper" : "project-wrapper-two"}>
 
                             <div className="info-wrapper" id="parent">
                                 <div className="card-img-overlay border-dark">
@@ -117,19 +74,15 @@ const ProjectCard = () => {
                                         <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
                                         {/* <h6 className="card-subtitle mb-2 text-muted info">{data.subTitle}</h6> */} {/* Removed subtitle*/}
 
-                                        <div style={{ padding: "0%", margin: "0%" }}>{wrapText === 1 ?
-
+                                        <div style={{ marginBottom: "10px" }}>{wrapText === 1 ?
                                             <div>
-                                                <p className="card-text description-info info">{data.projectDescription.substring(0, 100) + "..."}</p>
-                                                <Button onClick={() => expandModal(data)}>more info</Button>
+                                                <p style={{ display: "inline-block" }} className="card-text description-info info">{data.projectDescription.substring(0, 100) + " ... "}<span role="button" style={{ display: "inline", color: "#0d6efd" }} onClick={() => expandModal(data)}>read more</span></p>
                                             </div>
+                                            : <p style={{ display: "inline-block" }} className="card-text description-info info">{data.projectDescription.substring(0, 200) + " ... "}<span role="button" style={{ display: "inline", color: "#0d6efd" }} onClick={() => expandModal(data)}>read more</span></p>}</div>
 
-
-                                            : <p className="card-text description-info info">{data.projectDescription}</p>}</div>
-
-                                        <a href={data.linkOne} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleOne}</span></a>
-                                        <a href={data.linkTwo} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleTwo}</span></a>
-                                        <a href={data.LinkThree} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink">{data.linkTitleThree}</span></a>
+                                        <a href={data.linkOne} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink card-link-info">{data.linkTitleOne}</span></a>
+                                        <a href={data.linkTwo} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink card-link-info">{data.linkTitleTwo}</span></a>
+                                        <a href={data.LinkThree} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink card-link-info">{data.linkTitleThree}</span></a>
 
                                         <div id="tech-badges">
                                             <span className="badge bg-primary">{data.badgeOne}</span>
