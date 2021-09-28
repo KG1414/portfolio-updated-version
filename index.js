@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use("/", router);
 
 const contactEmail = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    service: 'gmail',
     auth: {
         user: "kylegallardfs@gmail.com",
         pass: process.env.PASS
@@ -56,6 +56,9 @@ router.post("/contact", (req, res) => {
     });
 });
 
+
+
+
 // weather
 const apiKey = process.env.API_KEY;
 const url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=Melbourne&units=m`;   // http://api.weatherstack.com/current
@@ -72,9 +75,11 @@ app.get("/weather", (req, res) => {
             const weatherDescription = data.current.weather_descriptions;
 
             res.send({ temp });
+
         }
     })
 });
+
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
