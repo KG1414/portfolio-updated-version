@@ -65,23 +65,26 @@ let transporter = nodemailer.createTransport({
     auth: {
         type: 'OAuth2',
         user: process.env.GMAIL_ADDRESS,
-        pass: process.env.MAIL_PASSWORD,
         clientId: process.env.GMAIL_OAUTH_CLIENT_ID,
         clientSecret: process.env.GMAIL_OAUTH_CLIENT_SECRET,
         refreshToken: process.env.GMAIL_OAUTH_REFRESH_TOKEN,
         accessToken: process.env.GMAIL_OAUTH_ACCESS_TOKEN,
         expires: Number.parseInt(process.env.GMAIL_OAUTH_TOKEN_EXPIRE, 10),
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 
-transporter.set('oauth2_provision_cb', (user, renew, callback) => {
-    let accessToken = userTokens[user];
-    if (!accessToken) {
-        return callback(new Error('Unknown user'));
-    } else {
-        return callback(null, accessToken);
-    }
-});
+
+// transporter.set('oauth2_provision_cb', (user, renew, callback) => {
+//     let accessToken = userTokens[user];
+//     if (!accessToken) {
+//         return callback(new Error('Unknown user'));
+//     } else {
+//         return callback(null, accessToken);
+//     }
+// });
 
 transporter.verify((error) => {
     if (error) {
