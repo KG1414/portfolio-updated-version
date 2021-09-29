@@ -5,7 +5,8 @@ const request = require("request");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const { google } = require('googleapis');
+const { google } = require("googleapis");
+
 
 const port = process.env.PORT || 5000;
 
@@ -20,47 +21,53 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use("/", router);
 
-const code = '4%2F0AX4XfWi-jGnoOoNpmd9LzuHUSR80hOtiaKatxSCLU19MXzzQnWqeAsl2NICciDVBf8cd4Q';
+// const oauth2Client = new google.auth.OAuth2(
+//     process.env.GMAIL_OAUTH_CLIENT_ID,
+//     process.env.GMAIL_OAUTH_CLIENT_SECRET,
+//     process.env.GMAIL_OAUTH_REDIRECT_URL,
+// );
 
-const oauth2Client = new google.auth.OAuth2(
-    process.env.GMAIL_OAUTH_CLIENT_ID,
-    process.env.GMAIL_OAUTH_CLIENT_SECRET,
-    process.env.GMAIL_OAUTH_REDIRECT_URL,
-);
+// oauth2Client.setCredentials({
+//     refresh_token: process.env.GMAIL_OAUTH_REFRESH_TOKEN
+// });
+// var accessToken = oauth2Client.getAccessToken();
 
 // Generate a url that asks permissions for Gmail scopes
-const GMAIL_SCOPES = [
-    'https://mail.google.com/',
-    'https://www.googleapis.com/auth/gmail.modify',
-    'https://www.googleapis.com/auth/gmail.compose',
-    'https://www.googleapis.com/auth/gmail.send',
-];
+// const GMAIL_SCOPES = [
+//     'https://mail.google.com/',
+//     'https://www.googleapis.com/auth/gmail.modify',
+//     'https://www.googleapis.com/auth/gmail.compose',
+//     'https://www.googleapis.com/auth/gmail.send',
+// ];
 
-const url = oauth2Client.generateAuthUrl({
-    access_type: 'offline',
-    scope: GMAIL_SCOPES,
-});
+// const url = oauth2Client.generateAuthUrl({
+//     access_type: 'offline',
+//     scope: GMAIL_SCOPES,
+//     prompt: 'consent',
+// });
 
-console.info(`authUrl: ${url}`);
+// console.info(`authUrl: ${url}`);
 
-let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    // host: 'smtp.gmail.com',
+    // port: 465,
+    // secure: true,
     auth: {
-        type: 'OAuth2',
+        // type: 'OAuth2',
         user: process.env.GMAIL_ADDRESS,
         pass: process.env.MAIL_PASSWORD,
-        clientId: process.env.GMAIL_OAUTH_CLIENT_ID,
-        clientSecret: process.env.GMAIL_OAUTH_CLIENT_SECRET,
-        refreshToken: process.env.GMAIL_OAUTH_REFRESH_TOKEN,
-        accessToken: process.env.GMAIL_OAUTH_ACCESS_TOKEN,
-        expires: Number.parseInt(process.env.GMAIL_OAUTH_TOKEN_EXPIRE, 10),
+        // clientId: process.env.GMAIL_OAUTH_CLIENT_ID,
+        // clientSecret: process.env.GMAIL_OAUTH_CLIENT_SECRET,
+        // refreshToken: process.env.GMAIL_OAUTH_REFRESH_TOKEN,
+        // accessToken: accessToken,
+        // expires: Number.parseInt(process.env.GMAIL_OAUTH_TOKEN_EXPIRE, 10),
     },
     tls: {
         rejectUnauthorized: false
     }
 });
+
 
 transporter.verify((error) => {
     if (error) {
@@ -69,6 +76,7 @@ transporter.verify((error) => {
         console.log("Ready to Send");
     }
 });
+
 
 router.post("/contact", (req, res) => {
     const name = req.body.name;
@@ -83,11 +91,12 @@ router.post("/contact", (req, res) => {
                <p>Message: ${message}</p>`
     };
 
-    transporter.sendMail(mailOptions, (error) => {
+    transporter.sendMail(mailOptions, (error, response) => {
         if (error) {
-            console.log(error + "" + JSON.stringify(error));
+            console.log(error);
             res.json({ status: "ERROR" });
         } else {
+            console.log(response);
             res.json({ status: "Message Sent" });
         }
     });
@@ -125,3 +134,6 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => console.log(`Example app listening on port:${port}`));
+
+
+
