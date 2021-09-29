@@ -20,14 +20,6 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use("/", router);
 
-// const contactEmail = nodemailer.createTransport({
-//     host: 'smtp.gmail.com',
-//     auth: {
-//         user: "kylegallardfs@gmail.com",
-//         pass: process.env.PASS
-//     },
-// });
-
 const code = '4%2F0AX4XfWi-jGnoOoNpmd9LzuHUSR80hOtiaKatxSCLU19MXzzQnWqeAsl2NICciDVBf8cd4Q';
 
 const oauth2Client = new google.auth.OAuth2(
@@ -35,13 +27,6 @@ const oauth2Client = new google.auth.OAuth2(
     process.env.GMAIL_OAUTH_CLIENT_SECRET,
     process.env.GMAIL_OAUTH_REDIRECT_URL,
 );
-
-// const getToken = async () => {
-//     const { tokens } = await oauth2Client.getToken(code);
-//     console.info(tokens);
-//   };
-
-//   getToken();
 
 // Generate a url that asks permissions for Gmail scopes
 const GMAIL_SCOPES = [
@@ -76,16 +61,6 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-
-// transporter.set('oauth2_provision_cb', (user, renew, callback) => {
-//     let accessToken = userTokens[user];
-//     if (!accessToken) {
-//         return callback(new Error('Unknown user'));
-//     } else {
-//         return callback(null, accessToken);
-//     }
-// });
-
 transporter.verify((error) => {
     if (error) {
         console.log(error);
@@ -93,8 +68,6 @@ transporter.verify((error) => {
         console.log("Ready to Send");
     }
 });
-
-
 
 router.post("/contact", (req, res) => {
     const name = req.body.name;
@@ -111,7 +84,7 @@ router.post("/contact", (req, res) => {
 
     transporter.sendMail(mailOptions, (error) => {
         if (error) {
-            res.json({ status: "ERROR" });
+            res.json({ status: error });
         } else {
             res.json({ status: "Message Sent" });
         }
