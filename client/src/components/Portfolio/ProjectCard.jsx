@@ -14,9 +14,11 @@ const style = {
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
+    outline: 'none',
     border: 'none',
-    boxShadow: 24,
+    boxShadow: 'none',
     p: 4,
+    borderRadius: '10px'
 };
 
 const ProjectCard = () => {
@@ -65,7 +67,7 @@ const ProjectCard = () => {
 
                 return (
                     <div key={index} id={data.id}>
-                        <div className={data.id % false === 0 ? "project-wrapper" : "project-wrapper-two"}>
+                        <div className={data.id % wrapText === 0 ? "project-wrapper" : "project-wrapper-two"}>
 
                             <div className="info-wrapper" id="parent">
                                 <div className="card-img-overlay border-dark">
@@ -85,16 +87,16 @@ const ProjectCard = () => {
                                         <a href={data.LinkThree} className="card-link" target="_blank" rel='noreferrer'><span className="cardLink card-link-info">{data.linkTitleThree}</span></a>
 
                                         <div id="tech-badges">
-                                            <span className="badge bg-primary">{data.badgeOne}</span>
-                                            <span className="badge bg-primary">{data.badgeTwo}</span>
-                                            <span className="badge bg-primary">{data.badgeThree}</span>
-                                            <span className="badge bg-primary">{data.badgeFour}</span>
-                                            <span className="badge bg-primary">{data.badgeFive}</span>
-                                            <span className="badge bg-primary">{data.badgeSix}</span>
-                                            <span className="badge bg-primary">{data.badgeSeven}</span>
-                                            <span className="badge bg-primary">{data.badgeEight}</span>
-                                            <span className="badge bg-primary">{data.badgeNine}</span>
-                                            <span className="badge bg-primary">{data.badgeTen}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeOne}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeTwo}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeThree}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeFour}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeFive}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeSix}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeSeven}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeEight}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeNine}</span>
+                                            <span className="badge bg-primary probadge">{data.badgeTen}</span>
                                         </div>
 
                                     </div>
@@ -122,13 +124,26 @@ const ProjectCard = () => {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" className="card-title project-card-title" variant="h6" component="h2">
+                    <Typography style={{ paddingBottom: "3%" }} id="modal-modal-title" className="card-title project-card-title" variant="h3" component="h2">
                         {selectedProject && selectedProject.projectTitle}
                     </Typography>
 
                     <Typography className="modal-modal-description" sx={{ mt: 2 }}>
                         {selectedProject && selectedProject.projectDescription}
                     </Typography>
+
+                    <div style={{ marginTop: "10%" }}>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeOne}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeTwo}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeThree}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeFour}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeFive}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeSix}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeSeven}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeEight}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeNine}</span>
+                        <span className="badge bg-primary">{selectedProject && selectedProject.badgeTen}</span>
+                    </div>
                 </Box>
             </Modal>
         </div>

@@ -34,6 +34,7 @@ div #tech-badges {
     bottom: 0 !important;
     flex-wrap: wrap;
     margin-top: 100%;
+    padding-right: 8% !important;
 }
 
 .card-img-overlay {
@@ -193,7 +194,7 @@ div #tech-badges {
 
 @media screen and (max-width: 1000px) {
     .card-text.description-info.info {
-        font-size: 12px !important;
+        font-size: 12px;
     }
 }
 
@@ -290,10 +291,6 @@ div #tech-badges {
         font-size: 12px;
     }
 
-    .badge {
-        overflow: hidden;
-    }
-
     .info-wrapper {
         position: relative;
         width: 100%;
@@ -306,5 +303,15 @@ div #tech-badges {
         margin-top: 5%;
         color: #22577A !important;
         line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-text.description-info.info {
+        font-size: 12px !important;
+    }
+
+    .probadge {
+        display: none;
     }
 }

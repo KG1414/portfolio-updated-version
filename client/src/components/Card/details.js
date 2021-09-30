@@ -64,7 +64,7 @@ const details = [
         imgURL: firebase,
         imgWidth: "60px",
         title: "Firebase",
-        description: "The Firebase Realtime Database is a cloud-hosted NoSQL database that lets you store and sync data between your users in realtime.",
+        description: "A cloud-hosted NoSQL database that lets you store and sync data between your users in realtime.",
         classDec: "",
         placeholder: "firebase-logo"
     },
@@ -73,7 +73,7 @@ const details = [
         imgURL: mongooseLogo,
         imgWidth: "140px",
         title: "Mongoose JS",
-        description: "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.",
+        description: "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.",
         classDec: "",
         placeholder: ""
     }
