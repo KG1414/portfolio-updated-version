@@ -19,7 +19,7 @@ const ContactForm = () => {
 
         // https://localhost:5000/contact
         // https://kylegallard.herokuapp.com/contact
-        let response = await fetch("/contact", {
+        let response = await fetch("https://kylegallard.herokuapp.com/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
