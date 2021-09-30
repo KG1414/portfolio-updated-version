@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeroImg.css';
 import Typewriter from "typewriter-effect";
-import Weather from '../../Weather/Weather.js';
+// import Weather from '../../Weather/Weather.js';
 import '../../Weather/Weather.css';
 
 function HeroImg() {
@@ -45,7 +45,7 @@ function HeroImg() {
                     </div>
 
                     <div className="weather-wrapper">
-                        <Weather />
+                        {/* <Weather /> */}
                     </div>
 
                 </div>

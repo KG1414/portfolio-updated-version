@@ -17,19 +17,40 @@ const ContactForm = () => {
 
         console.log(details);
 
-        // https://localhost:5000/contact
-        // https://kylegallard.herokuapp.com/contact
-        let response = await fetch("https://kylegallard.herokuapp.com/contact", {
+        let response = await fetch("https://getform.io/f/ebb0b166-a032-45f7-9f7e-e00fe831de14", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
             },
             body: JSON.stringify(details),
-        });
+        })
+            .then(response => {
+                console.log(response);
+                alert("Form successfully submitted.");
+            })
+            .catch(error => {
+                console.log(error);
+                alert("Error. Please email me at kylegallardfs@gmail.com instead. Error Details: " + error);
+            })
+
         setStatus("Submit");
-        let result = await response.json();
+        let result = await response();
         alert(result.status);
     };
+
+    // https://localhost:5000/contact
+    // https://kylegallard.herokuapp.com/contact
+    //     let response = await fetch("https://kylegallard.herokuapp.com/contact", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json;charset=utf-8",
+    //         },
+    //         body: JSON.stringify(details),
+    //     });
+    //     setStatus("Submit");
+    //     let result = await response.json();
+    //     alert(result.status);
+    // };
 
     return (
         <section id="contact-form-section" className="form-section">
