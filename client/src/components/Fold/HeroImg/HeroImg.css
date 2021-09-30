@@ -118,4 +118,25 @@
   
 }
 
+@media screen and (max-width: 600px) {
+  /* changing background image to use scroll for optimisation on iPhone */
+  .hero-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../../../assets/images/portfolio-main.png');
+    position: relative;
+    background-attachment: scroll;
+  
+    min-height: 650px;
+  
+    margin-top: 100px;
+    height: 100vh;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    margin: 0;
+    padding: 0;
+  }
+}
+
 

@@ -65,6 +65,11 @@ textarea::-webkit-input-placeholder {
   opacity: 0.8;
 }
 
+.form-error-text {
+  padding-top: 10%;
+  font-size: 12px !important;
+}
+
 
 @media screen and (max-width: 800px) {
   .contact-header {

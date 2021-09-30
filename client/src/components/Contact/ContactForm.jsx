@@ -4,20 +4,22 @@ import onlineWorld from '../../assets/images/online-world.png';
 
 const ContactForm = () => {
     const [status, setStatus] = useState("Submit");
+    const [altContact, setAltContact] = useState(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         setStatus("Sending...");
         const { name, email, message } = event.target.elements;
+
+
+
         let details = {
             name: name.value,
             email: email.value,
             message: message.value
         };
 
-        console.log(details);
-
-        let response = await fetch("https://getform.io/f/ebb0b166-a032-45f7-9f7e-e00fe831de14", {
+        await fetch("https://getform.io/f/ebb0b166-a032-45f7-9f7e-e00fe831de14", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -25,17 +27,33 @@ const ContactForm = () => {
             body: JSON.stringify(details),
         })
             .then(response => {
-                console.log(response);
-                alert("Form successfully submitted.");
+                if (response.ok) {
+                    console.log(response);
+                    alert("Form successfully submitted.");
+                    setStatus("Success!");
+                } else {
+                    throw new Error("Something went wrong.");
+                }
             })
             .catch(error => {
                 console.log(error);
-                alert("Error. Please email me at kylegallardfs@gmail.com instead. Error Details: " + error);
-            })
+                alert("Unsuccessful!");
+                setStatus("Unsuccessful");
+                setAltContact(true);
+            });
 
-        setStatus("Submit");
-        let result = await response();
-        alert(result.status);
+        if (status === "Unsuccessful") {
+            setStatus("Please contact via LinkedIn");
+        };
+
+        setTimeout(() => {
+            setStatus("Submit");
+        }, 3000);
+
+        details = null;
+
+        // let result = await response();
+        // alert(result.status);
     };
 
     // https://localhost:5000/contact
@@ -80,6 +98,10 @@ const ContactForm = () => {
                     </div>
 
                     <button className="w-100 btn btn-lg btn-primary contact-btn" type="submit">{status}</button>
+
+                    {altContact && <p class="form-error-text">Form Error. Please contact me via LinkedIn
+                        <span><a href="https://www.linkedin.com/in/kylegallard/" target="_blank" rel='noreferrer'> here</a></span>.</p>}
+
 
                 </form>
             </div>
