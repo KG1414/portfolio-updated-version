@@ -70,6 +70,21 @@ textarea::-webkit-input-placeholder {
   font-size: 12px !important;
 }
 
+.top {
+  margin-bottom: 1px;
+}
+
+.middle {
+    margin-bottom: 1px;
+
+  }
+
+.bottom {
+  margin-top: 2px;
+ 
+}
+
+
 
 @media screen and (max-width: 800px) {
   .contact-header {

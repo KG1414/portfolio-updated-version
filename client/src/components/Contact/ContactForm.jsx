@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import './ContactForm.css';
 import onlineWorld from '../../assets/images/online-world.png';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const formToken = process.env.REACT_APP_FORM_TOKEN;
+
+console.log("the form token is:" + formToken);
 
 const ContactForm = () => {
     const [status, setStatus] = useState("Submit");
@@ -11,15 +17,13 @@ const ContactForm = () => {
         setStatus("Sending...");
         const { name, email, message } = event.target.elements;
 
-
-
         let details = {
             name: name.value,
             email: email.value,
             message: message.value
         };
 
-        await fetch("https://getform.io/f/ebb0b166-a032-45f7-9f7e-e00fe831de14", {
+        await fetch(`https://getform.io/f/${formToken}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -86,12 +90,12 @@ const ContactForm = () => {
                     </div>
 
                     <div className="form-floating">
-                        <input type="email" name="email" className="form-control" id="floatingInput" autoComplete="off chrome-off" required></input>
+                        <input type="email" name="email" className="form-control middle" id="floatingInput" autoComplete="off chrome-off" required></input>
                         <label htmlFor="floatingInput">Email address</label>
                     </div>
 
                     <div>
-                        <textarea type="message" name="message" rows="3" className="form-control" placeholder="Message" autoComplete="off chrome-off" required></textarea>
+                        <textarea type="message" name="message" rows="3" className="form-control bottom" placeholder="Message" autoComplete="off chrome-off" required></textarea>
                     </div>
 
                     <div className="checkbox mb-3"> {/* remove this later */}
