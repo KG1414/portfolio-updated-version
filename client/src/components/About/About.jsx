@@ -42,9 +42,9 @@ const About = () => {
                 <hr />
                 <h3 style={{ textAlign: "center" }}>I'm Kyle, a Full Stack Developer based in Melbourne, Australia.</h3>
                 <br />
-                <p>I build functional products to solve problems, improve efficiency and give a great user experience.</p>
+                <p>I build functional products to solve problems, improve efficiency and provide a great user experience.</p>
                 <br />
-                <p><i>My inspiration to program is so that ideas don't need to remain as just... ideas; instead, they can put be into action.</i></p>
+                <p><i>My inspiration to program is so that ideas don't need to remain as just ideas and instead can be brought to life as a valuable product / service.</i></p>
 
                 <h2 className="section-heading" style={{ paddingTop: "40%", marginBottom: "0%", overflow: "none" }}>Tech Stack</h2>
             </div>
