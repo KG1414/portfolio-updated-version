@@ -44,7 +44,7 @@ const About = () => {
                 <br />
                 <p>I build functional products to solve problems, improve efficiency and provide a great user experience.</p>
                 <br />
-                <p><i>My inspiration to program is so that ideas don't need to remain as just ideas and instead can be brought to life as a valuable product / service.</i></p>
+                <p><i>My inspiration to program is so that I can turn great ideas into valuable products and/ or services.</i></p>
 
                 <h2 className="section-heading" style={{ paddingTop: "40%", marginBottom: "0%", overflow: "none" }}>Tech Stack</h2>
             </div>
