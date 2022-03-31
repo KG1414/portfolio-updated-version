@@ -52,13 +52,11 @@ const ProjectCard = () => {
             } else if (window.innerWidth >= "1000") {
                 setWrapText(2);
             }
-        }
-
+        };
         window.addEventListener('resize', handleResize)
-
         return _ => {
             window.removeEventListener('resize', handleResize)
-        }
+        };
     });
 
     return (
@@ -74,7 +72,6 @@ const ProjectCard = () => {
                                     <div className="card-body project-body">
 
                                         <h3 className="card-title project-card-title" id="title-mobile">{data.projectTitle}</h3>
-                                        {/* <h6 className="card-subtitle mb-2 text-muted info">{data.subTitle}</h6> */} {/* Removed subtitle*/}
 
                                         <div style={{ marginBottom: "10px" }}>{wrapText === 1 ?
                                             <div>
