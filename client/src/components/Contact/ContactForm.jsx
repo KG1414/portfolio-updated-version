@@ -6,8 +6,6 @@ dotenv.config();
 
 const formToken = process.env.REACT_APP_FORM_TOKEN;
 
-console.log("the form token is:" + formToken);
-
 const ContactForm = () => {
     const [status, setStatus] = useState("Submit");
     const [altContact, setAltContact] = useState(false);
@@ -53,27 +51,7 @@ const ContactForm = () => {
         setTimeout(() => {
             setStatus("Submit");
         }, 3000);
-
-        details = null;
-
-        // let result = await response();
-        // alert(result.status);
     };
-
-    // https://localhost:5000/contact
-    // https://kylegallard.herokuapp.com/contact
-    //     let response = await fetch("https://kylegallard.herokuapp.com/contact", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json;charset=utf-8",
-    //         },
-    //         body: JSON.stringify(details),
-    //     });
-    //     setStatus("Submit");
-    //     let result = await response.json();
-    //     alert(result.status);
-    // };
-
     return (
         <section id="contact-form-section" className="form-section">
 
@@ -109,9 +87,8 @@ const ContactForm = () => {
 
                 </form>
             </div>
-
         </section>
-    )
+    );
 };
 
 export default ContactForm;

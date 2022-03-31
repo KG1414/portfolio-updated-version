@@ -5,7 +5,6 @@ import Projects from './components/Portfolio/Projects.jsx';
 import ContactForm from './components/Contact/ContactForm.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
-
 function App() {
   return (
     <React.Fragment>
@@ -16,6 +15,6 @@ function App() {
       <Footer />
     </React.Fragment>
   );
-}
+};
 
 export default App;
