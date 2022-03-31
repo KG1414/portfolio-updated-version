@@ -12,7 +12,7 @@ class Header extends React.Component {
             buttonClicked: true,
             menuColor: true,
         };
-    }
+    };
 
     componentDidMount() {
         this.listener = document.addEventListener("scroll", event => {
@@ -27,17 +27,17 @@ class Header extends React.Component {
                 }
             }
         });
-    }
+    };
 
     componentDidUpdate() {
         document.removeEventListener("scroll", this.listener);
-    }
+    };
 
     onClickHandler = () => {
         if (this.state.menuColor) {
             this.setState({ menuColor: !this.state.menuColor });
-        }
-    }
+        };
+    };
 
     render() {
         let navBarStyle = { color: "" };
@@ -50,7 +50,7 @@ class Header extends React.Component {
         let buttonStyle = "navbar-toggler navbar-dark";
         if (!this.state.buttonStatus || !this.state.menuColor) {
             buttonStyle = "navbar-toggler navbar-light";
-        }
+        };
 
 
         return (
@@ -58,7 +58,6 @@ class Header extends React.Component {
                 <nav style={{
                     backgroundColor: this.state.status ? null : "#fff",
                 }}
-
 
                     className={this.state.menuColor ? "navbar navbar-expand-md fixed-top" : "navbar dropdown navbar-expand-md fixed-top"}>
                     <div className="container-fluid">
@@ -97,10 +96,9 @@ class Header extends React.Component {
                     </div>
 
                 </nav>
-
             </div>
         );
-    }
-}
+    };
+};
 
 export default Header;

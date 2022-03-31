@@ -10,7 +10,7 @@ const projectData = [
         id: 1,
         projectTitle: "My Portfolio",
         subTitle: "This current Portfolio",
-        projectDescription: "Current Website to showcase some of my recent projects. Created with custom features including the carousel and these cards. The Contact Me form uses the getform.io API  (formerly used NodeMailer API). Used Node and connected front end with backend for API's and to deploy to Heroku.",
+        projectDescription: "This current website is built with React.js to showcase some of my recent projects. Created with custom features including the carousel and these cards. The Contact Me form uses the getform.io API  (formerly used NodeMailer API). Used Node and connected front end with backend for API's and to deploy to Heroku.",
         imgUrl: currentProject,
         linkTitleOne: "Website",
         linkTitleTwo: "",
