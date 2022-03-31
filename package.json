@@ -17,11 +17,14 @@
     "start": "node index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "name": "server",
+  "name": "portfolio-app",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "16.x"
+  }
 }
