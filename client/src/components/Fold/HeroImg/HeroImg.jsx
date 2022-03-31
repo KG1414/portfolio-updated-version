@@ -16,7 +16,7 @@ function HeroImg() {
                         onInit={(typewriter) => {
                             typewriter
                                 .pauseFor(1000)
-                                .typeString("A passionate Web Dev.")
+                                .typeString("A passionate Programmer.")
                                 .pauseFor(1000)
                                 .deleteChars(22)
                                 .typeString("Problem solver.")
