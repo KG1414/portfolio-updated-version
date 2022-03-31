@@ -51,10 +51,7 @@ const ContactForm = () => {
         setTimeout(() => {
             setStatus("Submit");
         }, 3000);
-
-        details = null;
     };
-
     return (
         <section id="contact-form-section" className="form-section">
 
@@ -89,7 +86,6 @@ const ContactForm = () => {
 
                 </form>
             </div>
-
         </section>
     );
 };

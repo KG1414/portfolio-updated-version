@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import date from './date.js';
-// import '../index.css';
 
 function Footer() {
     return (

@@ -28,7 +28,7 @@ const About = () => {
         };
         window.addEventListener('resize', handleResize);
         return _ => {
-            window.removeEventListener('resize', handleResize)
+            window.removeEventListener('resize', handleResize);
         };
     });
 
