@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import './ContactForm.css';
 import onlineWorld from '../../assets/images/online-world.png';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
-const formToken = process.env.REACT_APP_FORM_TOKEN;
+const formToken = "";
 
 const ContactForm = () => {
     const [status, setStatus] = useState("Submit");
