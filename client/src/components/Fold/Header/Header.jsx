@@ -52,7 +52,6 @@ class Header extends React.Component {
             buttonStyle = "navbar-toggler navbar-light";
         };
 
-
         return (
             <div>
                 <nav style={{

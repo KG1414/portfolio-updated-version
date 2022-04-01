@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import './ContactForm.css';
 import onlineWorld from '../../assets/images/online-world.png';
-// import dotenv from 'dotenv';
-// dotenv.config();
-
-const formToken = "";
 
 const ContactForm = () => {
     const [status, setStatus] = useState("Submit");
@@ -21,7 +17,7 @@ const ContactForm = () => {
             message: message.value
         };
 
-        await fetch(`https://getform.io/f/${formToken}`, {
+        await fetch(`https://getform.io/f/${process.env.REACT_APP_FORM_TOKEN}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
